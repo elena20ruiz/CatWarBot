@@ -1,0 +1,4 @@
+# Copia de mapas de anteriores pasos
+# Automatizar comienzo haciendo copia del mapa original
+# Sacar output bien
+# API de twitter
