@@ -1,0 +1,9 @@
+version: '3.5'
+services:
+
+  catwarbot:
+    container_name: cat_war_bot
+    env_file:
+      - .env
+    build: .
+    restart: always

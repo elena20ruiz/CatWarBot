@@ -11,5 +11,5 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Run the application:
-COPY myapp.py .
-CMD ["python", "catwarbot.run_step"]
+COPY catwarbot .
+CMD ["python", "-m","catwarbot"]
