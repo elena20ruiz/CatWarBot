@@ -2,7 +2,7 @@ setmanes = {
     0 : 'Primera',
     1 : 'Segona',
     2 : 'Tercera',
-    3 : 'Cuarta'
+    3 : 'Quarta'
 }
 
 anys = {
