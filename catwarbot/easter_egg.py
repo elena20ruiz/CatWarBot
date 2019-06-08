@@ -3,5 +3,5 @@
 
 
 
-def do(comarques,veins):
+def run(comarques,veins):
     return comarques, veins

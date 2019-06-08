@@ -1,2 +1,5 @@
-PyQt5
-qgis-python
+twitter
+lxml
+bs4
+cairosvg
+tweepy

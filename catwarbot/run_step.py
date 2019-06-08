@@ -37,7 +37,7 @@ def run():
             guanyador = comarques[0][0]
             t_guanyador = comarques[guanyador][1]
             output += '. Finalment {} es proclama guanyador!'.format(t_guanyador)
-        #send_tweet.run(output, 'catwarbot/map/steps/mapa_{}.svg'.format(step))
+        send_tweet.run(output, 'catwarbot/map/steps/mapa_{}.svg'.format(step+1))
         save_step(step + 1)
 
 if __name__ == "__main__":
