@@ -129,7 +129,6 @@ def generate_output(comarques, winner, lost, terr, step):
     if terr != lost:
         output += ' #{}'.format(lost_t.replace(" ", ""))
     output += ' #CatalunyaWarBot'
-    print(output)
     return output
 
 
