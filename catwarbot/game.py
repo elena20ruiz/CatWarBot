@@ -1,7 +1,9 @@
 
 import random, json, queue
 from catwarbot import ctrl_data
-from catwarbot import map_game
+from catwarbot import map_game, easter_egg
+from catwarbot.variables import setmanes, anys
+
 
 def change_start_array(l):
     size = len(l)
@@ -69,7 +71,7 @@ def there_are_anyone(comarques, lost):
 
 
 def fight(step, t, c, ne, c_ne):
-    if step < 400:
+    if step < 500:
         # Fight!
         fight = random.randint(0,1)
 
@@ -91,23 +93,29 @@ def fight(step, t, c, ne, c_ne):
     return winner, lost, terr
 
 
-
-def generate_output(comarques, winner, lost, terr):
+def generate_output(comarques, winner, lost, terr, step):
    
     winner_t = comarques[winner][1]
     lost_t = comarques[lost][1]
     terr_t = comarques[terr][1]
 
+    init_year = 2040
+    mod_4 = step % 4 
+    mod_12 = int((step % 48)/4)
+    year_m = int(step/48)
+    year = init_year + year_m
+    output = '{} setmana del mes {}, any {}. '.format(setmanes[mod_4], anys[mod_12], year)
+
     # 1. X ha conquistat Y
-    output = '{} {} ha conquistat la comarca {} {},'.format(comarques[winner][4], winner_t, comarques[terr][5], terr_t)
+    output += '{} {} ha conquistat la comarca {} {},'.format(comarques[winner][4], winner_t, comarques[terr][5], terr_t)
 
     # 2 Y anteriorment ocupat per Z (opt)
     if terr != lost:
         output += ' anteriorment ocupada {} {}.'.format(comarques[lost][3], lost_t)
 
-    # 3 Z ha sigut completament derrotat: si no hi ha més
+    # 3 Z ha sigut completament derrotat: si no hi ha mes
     if not there_are_anyone(comarques, lost):
-        output += ' {} {} ha sigut completament derrotada.'.format(comarques[lost][4], comarques[lost][1])
+        output += 'La comarca {} {} ha sigut completament derrotada.'.format(comarques[lost][5], comarques[lost][1])
         # 3.1 Queden N territoris restants
         num  = get_n_last(comarques)
         if num == 1:
@@ -119,8 +127,8 @@ def generate_output(comarques, winner, lost, terr):
     output += '\n \n'
     output += '#{} #{}'.format(winner_t, terr_t)
     if terr != lost:
-        output += '#{}'.format(lost_t)
-
+        output += ' #{}'.format(lost_t)
+    output += ' #CatalunyaWarBot'
     print(output)
     return output
 
@@ -142,7 +150,7 @@ def run_step(step):
     comarques = ctrl_data.load_comarques()
     veins = ctrl_data.load_veins()
 
-    if step % 73 == 0:
+    if step != 0 and step % 1000 == 0:
         comarques, output = easter_egg.run(comarques, veins)
     else:
         # 1. Get random id -> t
@@ -167,10 +175,10 @@ def run_step(step):
         comarques[terr][0] = winner
 
         # 7. Generate output
-        output = generate_output(comarques, winner, lost, terr)
+        output = generate_output(comarques, winner, lost, terr, step)
 
         # 8. Save step and generate map
         ctrl_data.save_step(step, {"comarques": comarques})
         map_game.print_step(step, comarques, veins, winner, terr, lost)
-    
+
     return comarques, output

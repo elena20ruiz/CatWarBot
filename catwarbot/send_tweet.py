@@ -13,7 +13,7 @@ def run(text, path_img):
     api = tweepy.API(auth)
 
     image = to_png(path_img)
-    api.update_with_media(image, status=text)
+    #api.update_with_media(image, status=text)
 
 def to_png(path_img):
     with open(path_img, 'r') as f:

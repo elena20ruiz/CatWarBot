@@ -3571,11 +3571,11 @@
 		<polyline class="st46" points="642.5,510.5 640.3,511.7 638.25,514.22 		"/>
 	</g>
 </g>
-<g id="noms">
+<!-- <g id="noms">
 	<text transform="matrix(1 0 0 1 300 300)" id="winner" class="textgreen st48 st49">Alt </text>
 	<text transform="matrix(0.9998 0.0225 -0.0225 0.9998 500 500)" id="lost" class="textred st48 st49">Maresme</text>
 	<text transform="matrix(1 0 0 1 500 520)" id="territory" class="textblue st48 st49">Hola</text>
-</g>
+</g> -->
 
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="675.6473" y1="308.7602" x2="141.0319" y2="861.3243">
 	<stop  offset="0" style="stop-color:#0008E9"/>
