@@ -189,7 +189,7 @@ def add_texts(texts, territoris, comarques, winner, lost, territory, positions):
 
 
 def print_step(step, comarques, veins, winner, territory, lost):
-    with open("catwarbot/map/steps/mapa_{}.svg".format(step)) as fp:
+    with open("catwarbot/map/steps/mapa_{}.svg".format(step), encoding="utf-8") as fp:
         root = BeautifulSoup(fp, 'xml')
 
     # Get capes
@@ -234,5 +234,5 @@ def print_step(step, comarques, veins, winner, territory, lost):
     add_texts(texts, territoris, comarques, winner, lost, territory, positions)
 
     # Save SVG
-    with open("catwarbot/map/steps/mapa_{}.svg".format(step+1), "w") as fp:
+    with open("catwarbot/map/steps/mapa_{}.svg".format(step+1), "w", encoding="utf-8") as fp:
         fp.write(str(root))
