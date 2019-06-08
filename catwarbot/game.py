@@ -99,7 +99,7 @@ def generate_output(comarques, winner, lost, terr, step):
     lost_t = comarques[lost][1]
     terr_t = comarques[terr][1]
 
-    init_year = 2040
+    init_year = 2020
     mod_4 = step % 4 
     mod_12 = int((step % 48)/4)
     year_m = int(step/48)
@@ -107,27 +107,27 @@ def generate_output(comarques, winner, lost, terr, step):
     output = '{} setmana del mes {}, any {}. '.format(setmanes[mod_4], anys[mod_12], year)
 
     # 1. X ha conquistat Y
-    output += '{} {} ha conquistat la comarca {} {},'.format(comarques[winner][4], winner_t, comarques[terr][5], terr_t)
+    output += '{} {} ha conquistat la comarca {} {}'.format(comarques[winner][4], winner_t, comarques[terr][5], terr_t)
 
     # 2 Y anteriorment ocupat per Z (opt)
     if terr != lost:
-        output += ' anteriorment ocupada {} {}.'.format(comarques[lost][3], lost_t)
+        output += ', anteriorment ocupada {} {}.'.format(comarques[lost][3], lost_t)
 
     # 3 Z ha sigut completament derrotat: si no hi ha mes
     if not there_are_anyone(comarques, lost):
-        output += 'La comarca {} {} ha sigut completament derrotada.'.format(comarques[lost][5], comarques[lost][1])
+        output += ' {} {} passa a ser una comarca derrotada.\n'.format(comarques[lost][4], comarques[lost][1])
         # 3.1 Queden N territoris restants
         num  = get_n_last(comarques)
         if num == 1:
-            output += '\nLa comarca guanyadora es {} {}'.format(comarques[winner][4], winner_t)
+            output += '\n Finalment, {} {} es proclama comarca guanyadora!'.format(comarques[winner][4], winner_t)
         else:
             output += ' {} comarques restants.'.format(num)
 
     # 4 Hashtags
     output += '\n \n'
-    output += '#{} #{}'.format(winner_t, terr_t)
+    output += '#{} #{}'.format(winner_t.replace(" ", ""), terr_t.replace(" ", ""))
     if terr != lost:
-        output += ' #{}'.format(lost_t)
+        output += ' #{}'.format(lost_t.replace(" ", ""))
     output += ' #CatalunyaWarBot'
     print(output)
     return output
