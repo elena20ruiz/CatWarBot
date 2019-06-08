@@ -3,212 +3,338 @@
         "0": [
             0,
             "Alt Camp",
-            "#ffff"
+            "#C0392B",
+            "per l'",
+            "L'",
+            "de l'"
         ],
         "1": [
             1,
             "Alt Empord\u00e0",
-            "#ffff"
+            "#E74C3C",
+            "per l'",
+            "L'",
+            "de l'"
         ],
         "2": [
             2,
             "Alt Pened\u00e8s",
-            "#ffff"
+            "#9B59B6",
+            "per l'",
+            "L'",
+            "de l'"
         ],
         "3": [
             3,
             "Alt Urgell",
-            "#ffff"
+            "#8E44AD",
+            "per l'",
+            "L'",
+            "de l'"
         ],
         "4": [
             4,
             "Alta Ribagor\u00e7a",
-            "#ffff"
+            "#2980B9",
+            "per l'",
+            "L'",
+            "de l'"
         ],
         "5": [
             5,
             "Anoia",
-            "#ffff"
+            "#3498DB",
+            "per l'",
+            "L'",
+            "de l'"
         ],
-        "6": [
+        "6": [ 
             6,
             "Vall Aran",
-            "#ffff"
+            "#1ABC9C",
+            "per la",
+            "La",
+            "de la"
         ],
         "7": [
             7,
             "Baix Camp",
-            "#ffff"
+            "#16A085",
+            "pel",
+            "El",
+            "del"
         ],
         "8": [
             8,
             "Baix Ebre",
-            "#ffff"
+            "#27AE60",
+            "pel",
+            "El",
+            "del"
         ],
         "9": [
             9,
             "Baix Empord\u00e0",
-            "#ffff"
+            "#28B463",
+            "pel",
+            "El",
+            "del"
         ],
         "10": [
             10,
             "Baix Llobregat",
-            "#ffff"
+            "#F1C40F",
+            "pel",
+            "El",
+            "del"
         ],
         "11": [
             11,
             "Baix Pened\u00e8s",
-            "#ffff"
+            "#F39C12",
+            "pel",
+            "El",
+            "del"
         ],
         "12": [
             12,
             "Barcelon\u00e8s",
-            "#ffff"
+            "#F39C12",
+            "pel",
+            "El",
+            "del"
         ],
         "13": [
             13,
             "Bergued\u00e0",
-            "#ffff"
+            "#E67E22",
+            "pel",
+            "El",
+            "del"
         ],
         "14": [
             14,
             "Cerdanya",
-            "#ffff"
+            "#D35400",
+            "per la",
+            "La",
+            "de la"
         ],
         "15": [
             15,
             "Conca de Barber\u00e0",
-            "#ffff"
+            "#BDC3C7",
+            "per la",
+            "La",
+            "de la"
         ],
         "16": [
             16,
             "Garraf",
-            "#ffff"
+            "#FF0000",
+            "pel",
+            "El",
+            "del"
         ],
         "17": [
             17,
             "Garrigues",
-            "#ffff"
+            "#800000",
+            "per",
+            "Les",
+            "de les"
         ],
         "18": [
             18,
             "Garrotxa",
-            "#ffff"
+            "#FFFF00",
+            "per la",
+            "La",
+            "de la"
         ],
         "19": [
             19,
             "Giron\u00e8s",
-            "#ffff"
+            "#808000",
+            "pel",
+            "El",
+            "del"
         ],
         "20": [
             20,
             "Maresme",
-            "#ffff"
+            "#00FF00",
+            "pel",
+            "El",
+            "del"
         ],
         "21": [
             21,
             "Moian\u00e8s",
-            "#ffff"
+            "#00FF00",
+            "pel",
+            "El",
+            "del"
         ],
         "22": [
             22,
             "Montsi\u00e0",
-            "#ffff"
+            "#00FF00",
+            "pel",
+            "El",
+            "del"
         ],
         "23": [
             23,
             "Noguera",
-            "#ffff"
+            "#008080",
+            "per la",
+            "La",
+            "de la"
         ],
         "24": [
             24,
             "Osona",
-            "#ffff"
+            "#0000FF",
+            "per",
+            "",
+            "d'"
         ],
         "25": [
             25,
             "Pallars Sobir\u00e0",
-            "#ffff"
+            "#000080",
+            "pel",
+            "El",
+            "del"
         ],
         "26": [
             26,
             "Pallars Juss\u00e0",
-            "#ffff"
+            "#FF00FF",
+            "pel",
+            "El",
+            "del"
         ],
         "27": [
             27,
             "Pla d'Urgell",
-            "#ffff"
+            "#800080",
+            "pel",
+            "El",
+            "del"
         ],
         "28": [
             28,
             "Pla de l'Estany",
-            "#ffff"
+            "#fc4698",
+            "pel",
+            "El",
+            "del"
         ],
         "29": [
             29,
             "Priorat",
-            "#ffff"
+            "#f0795e",
+            "pel",
+            "El",
+            "del"
         ],
         "30": [
             30,
             "Ribera d'Ebre",
-            "#ffff"
+            "#484d79",
+            "per la",
+            "La ",
+            "de la"
         ],
         "31": [
             31,
             "Ripoll\u00e8s",
-            "#ffff"
+            "#2a5491",
+            "pel",
+            "El",
+            "del"
         ],
         "32": [
             32,
             "Segarra",
-            "#ffff"
+            "#570808",
+            "per la",
+            "La",
+            "de la"
         ],
         "33": [
             33,
             "Segri\u00e0",
-            "#ffff"
+            "#570808",
+            "pel",
+            "El",
+            "del"
         ],
         "34": [
             34,
             "Selva",
-            "#ffff"
+            "#b02f30",
+            "per la",
+            "La",
+            "de la"
         ],
         "35": [
             35,
             "Solson\u00e8s",
-            "#ffff"
+            "#469990",
+            "pel",
+            "El",
+            "del"
         ],
         "36": [
             36,
             "Tarragon\u00e8s",
-            "#ffff"
+            "#a9a9a9",
+            "pel",
+            "El",
+            "del"
         ],
         "37": [
             37,
             "Terra Alta",
-            "#ffff"
+            "#3cb44b",
+            "per la",
+            "La",
+            "de la"
         ],
         "38": [
             38,
             "Urgell",
-            "#ffff"
+            "#ffd8b1",
+            "per l'",
+            "L'",
+            "de l'"
         ],
         "39": [
             39,
             "Vall\u00e8s Occidental",
-            "#ffff"
+            "#bfef45",
+            "pel",
+            "El",
+            "del"
         ],
         "40": [
             40,
             "Vall\u00e8s Oriental",
-            "#ffff"
+            "#ffe119",
+            "pel",
+            "El",
+            "del"
         ],
         "41": [
             41,
             "Bages",
-            "#fffff"
+            "#e6194B",
+            "pel",
+            "El",
+            "del"
         ]
     }
 }
