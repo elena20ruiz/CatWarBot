@@ -74,7 +74,6 @@ def fight(step, t, c, ne, c_ne):
     if step < 500:
         # Fight!
         fight = random.randrange(0,999)
-        print(fight)
         if fight % 2:
             # C wins ne territory
             winner = c
