@@ -73,9 +73,9 @@ def there_are_anyone(comarques, lost):
 def fight(step, t, c, ne, c_ne):
     if step < 500:
         # Fight!
-        fight = random.randint(0,1)
-
-        if fight < 0.5:
+        fight = random.randrange(0,999)
+        print(fight)
+        if fight % 2:
             # C wins ne territory
             winner = c
             lost = c_ne
