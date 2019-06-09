@@ -107,21 +107,21 @@ def generate_output(comarques, winner, lost, terr, step):
     output = '{} setmana del mes {}, any {}. '.format(setmanes[mod_4], anys[mod_12], year)
 
     # 1. X ha conquistat Y
-    output += '{} {} ha conquistat la comarca {} {}'.format(comarques[winner][4], winner_t, comarques[terr][5], terr_t)
+    output += '{} {} ha conquerit la comarca {} {}'.format(comarques[winner][4], winner_t, comarques[terr][5], terr_t)
 
     # 2 Y anteriorment ocupat per Z (opt)
     if terr != lost:
-        output += ', anteriorment ocupada {} {}.'.format(comarques[lost][3], lost_t)
+        output += ', anteriorment ocupada {} {}'.format(comarques[lost][3], lost_t)
 
     # 3 Z ha sigut completament derrotat: si no hi ha mes
     if not there_are_anyone(comarques, lost):
-        output += ' {} {} passa a ser una comarca derrotada.\n'.format(comarques[lost][4], comarques[lost][1])
+        output += '. {} {} passa a ser una comarca derrotada'.format(comarques[lost][4], comarques[lost][1])
         # 3.1 Queden N territoris restants
         num  = get_n_last(comarques)
         if num == 1:
             output += '\n Finalment, {} {} es proclama comarca guanyadora!'.format(comarques[winner][4], winner_t)
         else:
-            output += ' {} comarques restants.'.format(num)
+            output += '.\n {} comarques restants.'.format(num)
 
     # 4 Hashtags
     output += '\n \n'
@@ -129,6 +129,7 @@ def generate_output(comarques, winner, lost, terr, step):
     if terr != lost:
         output += ' #{}'.format(lost_t.replace(" ", ""))
     output += ' #CatalunyaWarBot'
+    print(output)
     return output
 
 
@@ -154,7 +155,7 @@ def run_step(step):
     else:
         # 1. Get random id -> t
         n = len(comarques)
-        t = random.randint(0, n - 1)
+        t = (random.randint(0, n - 1)*step) % n
 
         # 2. Get conqueror -> c
         c = comarques[t][0]
